@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  border: 10px solid black;
+  max-width: 1000px; /* Corrected from device-width */
+  position: relative;
+  margin: 50px auto; /* Centered the container */
+  background: #b7b7b7;
+  
+}
+
+.slides {
+  display: none;
+} 
+
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numText { /* Updated to match HTML */
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
